@@ -18,5 +18,5 @@ class CreateUserView(APIView):
         )
         user_data.set_password(data['password'])
         user_data.save()
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.data)
 
